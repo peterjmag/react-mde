@@ -5,9 +5,7 @@
     "jsx": "react",
     "target": "es5",
     "module": "commonjs",
-    "typeRoots": [
-      "./node_modules/@types"
-    ],
+    "typeRoots": ["./node_modules/@types"],
     "lib": [
       "dom",
       "es2015",

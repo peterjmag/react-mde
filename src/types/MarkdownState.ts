@@ -1,6 +1,6 @@
-import {TextRange} from "./TextRange";
+import { TextRange } from "./TextRange";
 
 export interface MarkdownState {
-    selection: TextRange;
-    text: string;
+  selection: TextRange;
+  text: string;
 }

@@ -4,7 +4,9 @@
    Copied from https://github.com/grassator/insert-text-at-cursor
  */
 
-function canManipulateViaTextNodes(input: HTMLTextAreaElement | HTMLInputElement) {
+function canManipulateViaTextNodes(
+  input: HTMLTextAreaElement | HTMLInputElement
+) {
   if (input.nodeName !== "TEXTAREA") {
     return false;
   }
@@ -17,7 +19,10 @@ function canManipulateViaTextNodes(input: HTMLTextAreaElement | HTMLInputElement
   return browserSupportsTextareaTextNodes;
 }
 
-export function insertText(input: HTMLTextAreaElement | HTMLInputElement, text: string) {
+export function insertText(
+  input: HTMLTextAreaElement | HTMLInputElement,
+  text: string
+) {
   // Most of the used APIs only work with the field selected
   input.focus();
 

@@ -1,6 +1,7 @@
 ## Custom Buttons
 
 1. `ImageUploaderCommand.js` file:
+
 ```
 import {Command} from "../types";
 import ButtonComponent from "./ButtonComponent";

@@ -1,1 +1,1 @@
-export type Tab = "write" | "preview"
+export type Tab = "write" | "preview";

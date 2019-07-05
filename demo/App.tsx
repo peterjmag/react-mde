@@ -4,7 +4,7 @@ import * as Showdown from "showdown";
 
 export interface AppState {
   value: string;
-  tab: "write" | "preview"
+  tab: "write" | "preview";
 }
 
 export class App extends React.Component<{}, AppState> {
@@ -39,7 +39,7 @@ export class App extends React.Component<{}, AppState> {
           onChange={this.handleValueChange}
           onTabChange={this.handleTabChange}
           value={this.state.value}
-          generateMarkdownPreview={markdown =>
+          generateMarkdownPreview={(markdown) =>
             Promise.resolve(this.converter.makeHtml(markdown))
           }
           selectedTab={this.state.tab}

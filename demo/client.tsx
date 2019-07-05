@@ -8,7 +8,4 @@ import "../src/styles/react-mde-all.scss";
 import "./styles/demo.scss";
 import "./styles/variables.scss";
 
-render(
-    <App />,
-    document.getElementById("#app_container"),
-);
+render(<App />, document.getElementById("#app_container"));

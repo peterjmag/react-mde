@@ -16,7 +16,10 @@ export interface ReactMdePreviewState {
   preview?: React.ReactNode;
 }
 
-export class MdePreview extends React.Component<ReactMdePreviewProps, ReactMdePreviewState> {
+export class MdePreview extends React.Component<
+  ReactMdePreviewProps,
+  ReactMdePreviewState
+> {
   previewRef: HTMLDivElement;
 
   constructor(props) {
@@ -44,19 +47,22 @@ export class MdePreview extends React.Component<ReactMdePreviewProps, ReactMdePr
     let content;
 
     if (typeof finalHtml === "string") {
-      content = <div
-        className="mde-preview-content"
-        dangerouslySetInnerHTML={{ __html: finalHtml || "<p>&nbsp;</p>" }}
-        ref={(p) => this.previewRef = p}
-      />;
+      content = (
+        <div
+          className="mde-preview-content"
+          dangerouslySetInnerHTML={{ __html: finalHtml || "<p>&nbsp;</p>" }}
+          ref={(p) => (this.previewRef = p)}
+        />
+      );
     } else {
-      content = <div className="mde-preview-content">
-        {finalHtml}
-      </div>;
+      content = <div className="mde-preview-content">{finalHtml}</div>;
     }
 
     return (
-      <div className={classNames("mde-preview", { className, loading })} style={{ minHeight: minHeight + 10 }}>
+      <div
+        className={classNames("mde-preview", { className, loading })}
+        style={{ minHeight: minHeight + 10 }}
+      >
         {content}
       </div>
     );

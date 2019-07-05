@@ -4,7 +4,7 @@
 import { TextRange } from "./TextRange";
 
 export interface TextInsertionResult {
-    newText: string;
-    newSelection?: TextRange;
-    insertionLength: number;
+  newText: string;
+  newSelection?: TextRange;
+  insertionLength: number;
 }

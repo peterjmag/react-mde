@@ -10,7 +10,7 @@ const webpackCompiler = webpack(webpackConfig as any);
 const port = 4000;
 
 require.extensions[".html"] = (module, filename) => {
-    module.exports = fs.readFileSync(filename, "utf8");
+  module.exports = fs.readFileSync(filename, "utf8");
 };
 
 const app = express();
@@ -20,7 +20,7 @@ app.use(webpackHotMiddleware(webpackCompiler));
 app.use((req, res) => res.status(200).send(require("./index.html")));
 
 app.listen(port, "0.0.0.0", () => {
-    const demoUrl = `http://localhost:${port}/`;
-    // tslint:disable-next-line
-    console.log(`${packageJson.name} running at ${demoUrl}`);
+  const demoUrl = `http://localhost:${port}/`;
+  // tslint:disable-next-line
+  console.log(`${packageJson.name} running at ${demoUrl}`);
 });

@@ -1,4 +1,4 @@
 export interface L18n {
-  write: string
-  preview: string
+  write: string;
+  preview: string;
 }

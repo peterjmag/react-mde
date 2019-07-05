@@ -4,10 +4,9 @@ import * as React from "react";
 
 describe("<MyComponent />", () => {
   it("renders three <Foo /> components", () => {
-
     let value = "hello";
-    const onChange = (value: string) => value = value;
+    const onChange = (value: string) => (value = value);
 
-    const wrapper = mount(<TextArea value={value} onChange={onChange}/>);
+    const wrapper = mount(<TextArea value={value} onChange={onChange} />);
   });
 });
