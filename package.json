@@ -12,6 +12,7 @@
     "build:demo": "cross-env NODE_ENV=production gulp build-demo",
     "build:lib": "cross-env NODE_ENV=production gulp build-lib",
     "lint": "pretty-quick",
+    "prettier": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,html,scss,md}\"",
     "tsc": "tsc",
     "webpack": "webpack --config webpack.config.demo.dev.js",
     "webpack:prod": "webpack --config webpack.config.demo.prod.js"
@@ -66,7 +67,7 @@
     "node-sass": "^4.9.0",
     "normalize.css": "^8.0.0",
     "opn": "^5.2.0",
-    "prettier": "^1.14.1",
+    "prettier": "1.18.2",
     "pretty-quick": "^1.6.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
